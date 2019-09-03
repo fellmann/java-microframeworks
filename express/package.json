@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "start": "node index.js",
+        "build": "parcel build index.js --target=node --bundle-node-modules",
+        "start-bundle": "node dist/index.js",
+        "zip-size": "gzip -c dist/index.js | wc -c"
+    },
+    "dependencies": {
+        "archiver": "^3.1.1",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "parcel-bundler": "^1.12.3"
+    }
+}

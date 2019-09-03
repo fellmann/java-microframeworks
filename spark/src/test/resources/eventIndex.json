@@ -1,0 +1,20 @@
+{
+  "resource": "/",
+  "path": "/",
+  "httpMethod": "GET",
+  "stageVariables": null,
+  "requestContext": {
+    "path": "/{proxy+}",
+    "accountId": "123456789012",
+    "resourceId": "nl9h80",
+    "stage": "test-invoke-stage",
+    "requestId": "test-invoke-request",
+    "resourcePath": "/{proxy+}",
+    "identity": {
+
+    },
+    "apiId": "r275xc9bmd"
+  },
+  "body": "",
+  "isBase64Encoded": false
+}

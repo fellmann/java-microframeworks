@@ -1,0 +1,33 @@
+plugins:
+- serverless-apigw-binary
+
+service: microframeworks-spark
+
+provider:
+  name: aws
+  runtime: java8
+  stage: dev
+  region: eu-central-1
+  logRetentionInDays: 30
+  timeout: 3
+
+package:
+  artifact: target/serverless.jar
+
+functions:
+  generate:
+    handler: de.hannofellmann.LambdaHandler
+    memorySize: 2048
+    events:
+    - http:
+        path: /{proxy+}
+        method: any
+    - http:
+        path: /
+        method: any
+
+custom:
+  apigwBinary:
+    types:
+    - '*/*'
+    
